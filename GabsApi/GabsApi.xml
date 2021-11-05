@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GabsApi</name>
+    </assembly>
+    <members>
+        <member name="T:GabsApi.Controllers.GabsController">
+            <summary>
+            A Gabs controller.
+            </summary>
+        </member>
+        <member name="M:GabsApi.Controllers.GabsController.#ctor(GabsApi.Repository.IGabsRepository,AutoMapper.IMapper)">
+            <summary>
+            A Gabs controller.
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:GabsApi.Controllers.GabsController.GetGabss">
+            <summary>
+            Get a list of Gabs containing all the Gabs.
+            </summary>
+            <returns>An Action Result type.</returns>
+            <response code="200">Returns a Gabs Collection.</response>
+        </member>
+        <member name="M:GabsApi.Controllers.GabsController.GetGabs(System.Int32)">
+            <summary>
+            Get a Gabs by id.
+            </summary>
+            <param name="id"></param>
+            <returns>An Action Result type.</returns>
+            <response code="200">Returns a Gabs by id.</response>
+        </member>
+        <member name="T:GabsApi.Controllers.OtherGabsController">
+            <summary>
+            Other Gabs controller.
+            </summary>
+        </member>
+        <member name="M:GabsApi.Controllers.OtherGabsController.#ctor(GabsApi.Repository.IGabsRepository,AutoMapper.IMapper)">
+            <summary>
+            Other Gabs controller.
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:GabsApi.Controllers.OtherGabsController.GetOtherGabs(System.Int32,System.Int32)">
+            <summary>
+            Get other Gabs by id.
+            </summary>
+            <param name="gabsId"></param>
+            <param name="id"></param>
+            <returns>An IAction result type.</returns>
+            <response code="200">Returns a Gabs by id.</response>
+        </member>
+        <member name="M:GabsApi.Controllers.OtherGabsController.GetOtherGabss">
+            <summary>
+            Get a "other Gabs" list.
+            </summary>
+            <returns>An IAction Result type.</returns>
+            <response code="200">Returns a "GetOtherGabs" Collection.</response>
+        </member>
+        <member name="M:GabsApi.Controllers.OtherGabsController.PostNewGabs(System.Int32,GabsApi.Model.OtherGabsDto)">
+            <summary>
+            Post a new Gabs.
+            </summary>
+            <param name="gabsId"></param>
+            <param name="otherGabsDto"></param>
+            <returns>An IAction result type.</returns>
+            <response code="201">Returns the newly created Gabs.</response>
+            <response code="404">Returns Not Found if Gabs doesn't exists.</response>
+            <response code="400">Returns a Bad Request if the description is equal to name.</response>
+        </member>
+        <member name="M:GabsApi.Controllers.OtherGabsController.UpdateGabs(System.Int32,System.Int32,GabsApi.Model.OtherGabsDto)">
+            <summary>
+            Update an existing Gabs.
+            </summary>
+            <param name="gabsId"></param>
+            <param name="id"></param>
+            <param name="gabsDto"></param>
+            <returns>An IAction Result type.</returns>
+            <response code="204">Returns an updated Gabs.</response>
+            <response code="404">Returns Not Found if Gabs doesn't exists.</response>
+            <response code="400">Returns a Bad Request if the description is equal to name.</response>
+        </member>
+        <member name="T:GabsApi.Model.Gabs">
+            <summary>
+            Gabs entity.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.Gabs.Id">
+            <summary>
+            The Gabs Id.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.Gabs.Name">
+            <summary>
+            The Gabs name.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.Gabs.Age">
+            <summary>
+            The Gabs Age.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.Gabs.Description">
+            <summary>
+            The Gabs description.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.Gabs.GabsList">
+            <summary>
+            A list containing new Gabs.
+            </summary>
+        </member>
+        <member name="T:GabsApi.Model.OtherGabs">
+            <summary>
+            Other possible Gabs.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabs.Id">
+            <summary>
+            The Gabs Id.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabs.Name">
+            <summary>
+            The Gabs name.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabs.Age">
+            <summary>
+            The Gabs Age.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabs.Description">
+            <summary>
+            The Gabs description.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabs.Gabs">
+            <summary>
+            A Gabs.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabs.GabsId">
+            <summary>
+            Gabs Id.
+            </summary>
+        </member>
+        <member name="T:GabsApi.Model.GabsDto">
+            <summary>
+            The Gabs Dto.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.GabsDto.Id">
+            <summary>
+            The Gabs Id.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.GabsDto.Name">
+            <summary>
+            The Gabs name.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.GabsDto.Age">
+            <summary>
+            The Gabs Age.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.GabsDto.Description">
+            <summary>
+            The Gabs description.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.GabsDto.GabsList">
+            <summary>
+            A list containing new Gabs.
+            </summary>
+        </member>
+        <member name="T:GabsApi.Model.OtherGabsDto">
+            <summary>
+            The other Gabs Dto.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabsDto.Id">
+            <summary>
+            The Gabs Id.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabsDto.Name">
+            <summary>
+            The Gabs name.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabsDto.Age">
+            <summary>
+            The Gabs Age.
+            </summary>
+        </member>
+        <member name="P:GabsApi.Model.OtherGabsDto.Description">
+            <summary>
+            The Gabs description.
+            </summary>
+        </member>
+    </members>
+</doc>
